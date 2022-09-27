@@ -5,8 +5,8 @@ import React from "react";
 function Home(){
     return(
         <div>
-        <Classique />
-        <Salades />
+            <Classique />
+            <Salades />
         </div>
         
     );

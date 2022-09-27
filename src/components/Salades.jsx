@@ -1,27 +1,40 @@
 import React from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
-import { useEffect , useState} from "react";
+
+import data from "../utils/data.js"
 
 function Salades(){
+
     const [salades, setSalades] = useState([]);
+
     useEffect(() => {
         getSalades()
     },[]);
 
     const getSalades = async() => {
-        const url = 'https://api.spoonacular.com/recipes/random?apikey=${proces.env.REACT_APP_API_KEY&number=15';
-        axios.get(url).then(data => console.log(data)).catch(error => console.log(error));
-        
+        const url = data.url.base + data.url.recipe + data.spoonacularKey + "&number=10&tags=vegetarian,dessert";
+        axios.get(url).then(res => {
+            console.log(res.data);
+            setSalades(res.data.recipes);
+        }).catch(error => {
+            console.log(error);
+        });
     };
+    
     
     return (
         <div>
-            {salades.map(recipe => {return(
-                <div key={recipe.id}>
-                    <p>{recipe.title}</p>
-                </div>
-            );
-            })}
-        </div>);   
+            {
+                salades.map((recipe) => {
+                    return (
+                        <div key={recipe.id}>
+                            <p>{recipe.title}</p>
+                        </div>
+                    );
+                })
+            }
+        </div>
+    );   
 }
 export default Salades;
