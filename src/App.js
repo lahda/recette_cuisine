@@ -4,6 +4,8 @@ import { AnimatePresence } from "framer-motion";
 import Home from "./pages/Home";
 import Categories from "./components/Categories";
 import Cuisine from "./pages/Cuisine";
+import Search from "./components/Search";
+import Searched from "./pages/Searched";
 
 function App() {
   return (
@@ -13,7 +15,9 @@ function App() {
         <Routes>
           <Route index element={<Home/>}/>
           <Route path="categories" element={<Categories/>}/>
-          <Route path="cuisine" element={<Cuisine/>}/>
+          <Route path="cuisine/:type" element={<Cuisine/>}/>
+          <Route path="Search" element={<Search/>}/>
+          <Route path="Searched" element={<Searched/>}/>
         </Routes>
       </BrowserRouter>
     </div>

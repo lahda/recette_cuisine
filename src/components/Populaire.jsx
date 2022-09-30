@@ -8,19 +8,19 @@ import '@splidejs/react-splide/css';
 
 import "./styles.css"
 
-function Salades(){
+function Populaire(){
 
-    const [salades, setSalades] = useState([]);
+    const [populaire, setPopulaire] = useState([]);
 
     useEffect(() => {
-        getSalades()
+        getPopulaire()
     },[]);
 
-    const getSalades = async() => {
+    const getPopulaire = async() => {
         const url = data.url.base + data.url.recipe + data.spoonacularKey + "&number=10&tags=vegetarian,dessert";
         axios.get(url).then(res => {
             console.log(res.data);
-            setSalades(res.data.recipes);
+            setPopulaire(res.data.recipes);
             console.log(data.recipes);
         }).catch(error => {
             console.log(error);
@@ -30,7 +30,7 @@ function Salades(){
     return (
         <>           
             <div className="wrapper">
-                <h3>salades populaires</h3>
+                <h3>Mets populaires</h3>
                 <Splide options = {{
                     perPage: 4,
                     arrows: false,
@@ -39,7 +39,7 @@ function Salades(){
                     gap: "4rem",
                 }}>
                     {
-                        salades.map((recipe) => {
+                        populaire.map((recipe) => {
                         return (
                                 <SplideSlide>
                                     <div className="card">
@@ -57,4 +57,4 @@ function Salades(){
     );   
 }
 
-export default Salades;
+export default Populaire;

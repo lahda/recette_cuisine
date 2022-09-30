@@ -29,7 +29,7 @@ function Classique(){
     return(
         <>           
             <div className="wrapper">
-                <h3>Classique</h3>
+                <h3>Classiques</h3>
                 <Splide options = {{
                     perPage: 4,
                     arrows: false,
