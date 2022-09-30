@@ -3,7 +3,7 @@ const data = {
         base: "https://api.spoonacular.com/",
         recipe: "recipes/random",
     },
-    spoonacularKey: "?apiKey=009020a902ac4d9ea589d3917c2a40e8"
+    spoonacularKey: "?apiKey=12200dcbfecc4eaaaee8d888f4606dff"
 };
 
-export default data
+export default data;

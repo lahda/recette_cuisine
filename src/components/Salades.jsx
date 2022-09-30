@@ -57,29 +57,4 @@ function Salades(){
     );   
 }
 
-// const Wrapper = styled.div`
-// margin : 4rem 0rem;
-// `;
-// const Card = styled.div
-//  ` min-height: 25rem;
-//    border-radius: 5rem; 
-//    overflow: hidden;
-//    position: relative;
-//    img{
-//     border-radius: 2rem;
-//     positon: absolute;
-//     left: 0;
-//     with: 100%;
-//     height: 100%;
-//     object-fit: cover;
-
-//    }
-//  `;
-//  const Gradient = styled.div`
-//   z-index: 3;
-//   with: 100%;
-//   height: 100%;
-//   background-color: linear-gradient(rgb(0,0,0,0));
-//  `;
-
 export default Salades;
