@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import data from "../utils/Data.js";
+import data from "../utils/data";
 
 
 
