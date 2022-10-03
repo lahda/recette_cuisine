@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import data from "../utils/data.js";
+import data from "../utils/Data.js";
 
 
 
@@ -9,7 +9,7 @@ function Cuisine(){
     const [cuisine, setCuisine] = useState([]);
 
     useEffect(() => {
-        getCuisine()
+        getCuisine();
     },[]);
 
     const getCuisine = async() => {
@@ -20,7 +20,6 @@ function Cuisine(){
             console.log(data.recipes);
         }).catch(error => {
             console.log(error);
-
         });
     };
 

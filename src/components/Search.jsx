@@ -9,20 +9,26 @@ import {useNavigate} from "react-router-dom";
 
 function Search() {
     const[input, setInput]= useState("");
-    const navigate= useNavigate();
+    const navigate = useNavigate();
+
+    const inputHandler = (event) => {
+      setInput(event.target.value);
+    }
+
     const submitHandler= (e)=> {
         e.preventDefault();
         navigate('/Searched/' + input);
     };
+
     return (
       <div>
         <FormStyle OnSubmit={submitHandler}>
             <FaSearch></FaSearch>
             <div>
              <input 
-             OnChange ={(e)=> setInput(e.target.value)}
-             type="text" 
-             value={input}
+              onChange={inputHandler}
+              type="text"
+              value={input}
              />
             </div> 
         </FormStyle>
@@ -53,6 +59,6 @@ function Search() {
     transform: translate(100%, -50%);
     color:white;
   }
-  `
+  `;
   
   export default Search;
