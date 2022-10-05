@@ -41,7 +41,7 @@ function Classique(){
                     {
                         classique.map((recipe) => {
                         return (
-                                <SplideSlide>
+                                <SplideSlide key={recipe.id}>
                                     <div className="card">
                                         <Link to={"/recipe"+ recipe.id}>
                                         <p>{recipe.title}</p>

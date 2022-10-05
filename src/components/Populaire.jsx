@@ -41,7 +41,7 @@ function Populaire(){
                     {
                         populaire.map((recipe) => {
                         return (
-                                <SplideSlide>
+                                <SplideSlide key={recipe.id}>
                                     <div className="card">
                                         <p>{recipe.title}</p>
                                         <img src={recipe.image} alt={recipe.title}/>
