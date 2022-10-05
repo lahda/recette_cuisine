@@ -1,4 +1,4 @@
-import {BrowserRouter, Route, Routes} from "react-router-dom";
+import {BrowserRouter, Route, Routes, useLocation} from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 
 import Home from "./pages/Home";
@@ -8,7 +8,9 @@ import Search from "./components/Search";
 import Searched from "./pages/Searched";
 import Recipe from "./pages/Recipe";
 
+
 function App() {
+
   return (
     <div className="App">
       <BrowserRouter>
@@ -21,11 +23,10 @@ function App() {
           <Route path="cuisine/:type" element={<Cuisine/>}/>
           <Route path="Search" element={<Search/>}/>
           <Route path="Searched" element={<Searched/>}/>
-          <Route path="Recipe" element = {<Recipe/>}/>
+          <Route path="Recipe/:name" element = {<Recipe/>}/>
         </Routes>
       </BrowserRouter>
     </div>
   );
 }
-
 export default App;

@@ -5,6 +5,7 @@ import axios from "axios";
 import data from "../utils/data";
 import {Splide, SplideSlide} from "@splidejs/react-splide";
 import '@splidejs/react-splide/css';
+import { Link } from "react-router-dom";
 
 import "./styles.css"
 
@@ -42,9 +43,11 @@ function Classique(){
                         return (
                                 <SplideSlide>
                                     <div className="card">
+                                        <Link to={"/recipe"+ recipe.id}>
                                         <p>{recipe.title}</p>
                                         <img src={recipe.image} alt={recipe.title}/>
                                         <div className="gradient"/>
+                                        </Link>
                                     </div>
                                 </SplideSlide>
                             );
