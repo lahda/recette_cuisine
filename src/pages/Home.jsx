@@ -2,11 +2,6 @@ import Classique from "../components/Classique";
 import Populaire from "../components/Populaire";
 import React from "react";
 import {motion} from "framer-motion";
-import {BrowserRouter, Link} from "react-router-dom";
-import styled from "styled-components";
-import {GiKnifeFork} from "react-icons/gi";
-
-
 
 function Home(){
     return(
