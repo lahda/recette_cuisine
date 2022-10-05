@@ -14,14 +14,14 @@ function Populaire(){
 
     useEffect(() => {
         getPopulaire()
-    },[]);
+    });
 
     const getPopulaire = async() => {
         const url = data.url.base + data.url.recipe + data.spoonacularKey + "&number=10&tags=vegetarian,dessert";
-        axios.get(url).then(res => {
+        await axios.get(url).then(res => {
             console.log(res.data);
             setPopulaire(res.data.recipes);
-            console.log(data.recipes);
+            console.log(populaire);
         }).catch(error => {
             console.log(error);
         });

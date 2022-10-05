@@ -1,5 +1,5 @@
 import Classique from "../components/Classique";
-import Populaire from "../components/Populaire";
+// import Populaire from "../components/Populaire";
 import React from "react";
 import {motion} from "framer-motion";
 
@@ -20,7 +20,7 @@ function Home(){
           transition = {{duration: 0.5}}
          >
             <Classique />
-            <Populaire /> 
+            {/* <Populaire />  */}
          </motion.div>
         </div>    
     );
