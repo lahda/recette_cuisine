@@ -3,7 +3,6 @@ import {useEffect, useState} from "react";
 import data from "../utils/data";
 import axios from "axios";
 import {useParams} from "react-router-dom";
-import styled from "styled-components";
 import "./Recipe.css";
 
 
@@ -25,7 +24,7 @@ function Recipe(){
     }
     useEffect(() => {
         getDetails(params.name)
-    },[params.name]);
+    });
 
     return(
        
@@ -36,9 +35,9 @@ function Recipe(){
             </div>  
             <div className="info">
                 <button className={activeTab=== "intructions" ? "active": "" } 
-                onClick = {() => setActiveTab(intructions)}>Instructions</button>
+                onClick = {() => setActiveTab('intructions')}>Instructions</button>
                 <button className={activeTab === "ingredients" ? "active": "" } 
-                onClick = {() => setActiveTab(ingredients)}>Ingredients</button>
+                onClick = {() => setActiveTab('ingredients')}>Ingredients</button>
             {activeTab ==='instructions' && (
                  <div>
                  <h3 dangerouslySetInnerHTML={{__html: params.name}}></h3>
@@ -48,7 +47,7 @@ function Recipe(){
             </div> 
             {activeTab === 'ingredients' && (
                 <ul>
-                {details.extendedIngredients.map((ingredients) =>(
+                {details.extendedIngredients.map((ingredient) =>(
                     <li key={ingredient.id}>{ingredient.original}</li>
                 ))}
             </ul>
