@@ -1,4 +1,4 @@
-import {BrowserRouter, Route, Routes, useLocation} from "react-router-dom";
+import {BrowserRouter, Route, Routes} from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 
 import Home from "./pages/Home";
@@ -18,7 +18,7 @@ function App() {
         <Search/>
         <Categories/>
         <Routes>
-          <Route index element={<Home/>}/>
+          <Route path="/" element={<Home/>}/>
           <Route path="categories" element={<Categories/>}/>
           <Route path="cuisine/:type" element={<Cuisine/>}/>
           <Route path="Search" element={<Search/>}/>
