@@ -6,7 +6,7 @@ const data = {
         research: "recipes/complexSearch",
      
     },
-    spoonacularKey: "?apiKey=6c8abaa1df7848419d4a0864f65c60d1"
+    spoonacularKey: "?apiKey=c138adb653704d5ba24063308fc76c8f"
 };
 
 export default data;

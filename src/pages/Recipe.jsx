@@ -8,7 +8,7 @@ import "./Recipe.css";
 
 function Recipe(){
     const [details, setDetails] = useState();
-    const [activeTab, setActiveTab] = useState("intructions");
+    const [activeTab, setActiveTab] = useState("instructions");
     let params = useParams();
 
     const getDetails = async (name) =>{
@@ -34,8 +34,8 @@ function Recipe(){
             <img src={params.name} alt=""/>
             </div>  
             <div className="info">
-                <button className={activeTab=== "intructions" ? "active": "" } 
-                onClick = {() => setActiveTab('intructions')}>Instructions</button>
+                <button className={activeTab=== "instructions" ? "active": "" } 
+                onClick = {() => setActiveTab('instructions')}>Instructions</button>
                 <button className={activeTab === "ingredients" ? "active": "" } 
                 onClick = {() => setActiveTab('ingredients')}>Ingredients</button>
             {activeTab ==='instructions' && (
