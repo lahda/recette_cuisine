@@ -4,7 +4,6 @@ import axios from "axios";
 import data from "../utils/data";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import {motion} from "framer-motion";
 import {useParams} from "react-router-dom";
 
 
