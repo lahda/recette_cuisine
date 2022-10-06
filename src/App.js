@@ -13,7 +13,7 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Template />}>
+          <Route path="https://tentee-recipe.herokuapp.com/" element={<Template />}>
             <Route index element={<Home/>}/>
             <Route path="cuisine/:type" element={<Cuisine/>}/>
             <Route path="Searched" element={<Searched/>}/>
