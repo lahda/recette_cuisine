@@ -16,7 +16,7 @@ function App() {
           <Route path="/" element={<Template />}>
             <Route index element={<Home/>}/>
             {/* <Route path="cuisine/:type" element={<Cuisine/>}/> */}
-            <Route path="Searched" element={<Searched/>}/>
+            {/* <Route path="Searched" element={<Searched/>}/> */}
             {/* <Route path="Recipe/:name" element = {<Recipe/>}/> */}
           </Route>
         </Routes>
